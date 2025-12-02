@@ -1,12 +1,14 @@
 import './App.css'
-import { Box, Divider } from "@chakra-ui/react"
+import { Box, useColorModeValue } from "@chakra-ui/react"
 import Header from './sections/Header'
 import Footer from './sections/Footer'
 import { Outlet } from "react-router-dom";
 
 function App() {
+  const bg = useColorModeValue("#edede9", "#0A0A0A");
+
   return (
-    <Box bg='#edede9' width='100%' pt={5}>
+    <Box bg={bg} width='100%' pt={5}>
       <Header />
       <Outlet />
       <Footer />

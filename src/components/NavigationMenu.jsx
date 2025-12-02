@@ -13,27 +13,32 @@ import {
   Link as ChakraLink,
   LinkBox,
   LinkOverlay,
-  Link
+  Link,
+  useColorMode,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { Link as ReactRouterLink, useLocation } from 'react-router-dom'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Marquee from "react-fast-marquee";
-import { MdCopyright } from "react-icons/md";
+import { MdCopyright, MdLightMode, MdDarkMode } from "react-icons/md";
 import { FaSpotify } from "react-icons/fa";
 import icon from'../assets/icon.png';
 import Resume from'../assets/resume.pdf';
-// import Resume from "../assets/resume.pdf";
 import getRecentlyPlayedInfo from "../SpotifyAPI";
 
 function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
   return (
     <MenuItem
-      as="a" onClick={() => setCurrentForm(name)} textAlign='center'
-      fontSize='3xl' textStyle='secondary'  backgroundColor='#0A0A0A'
-      color='white' isDisabled={isDisabled}
+      as="a"
+      onClick={() => setCurrentForm(name)}
+      textAlign='center'
+      fontSize='3xl'
+      textStyle='secondary'
+      color="#edede9"
+      backgroundColor="#0A0A0A"
+      isDisabled={isDisabled}
     >
-      <ChakraLink as={ReactRouterLink} to={url} width='100%' _hover={{ textDecoration: "none", color: '#494949' }}>
+      <ChakraLink as={ReactRouterLink} to={url} width='100%' _hover={{ textDecoration: "none", color: "#494949" }}>
         {name}
       </ChakraLink>
     </MenuItem>
@@ -42,9 +47,9 @@ function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
 
 function SpotifyRecentlyPlayed({currentTrack}) {
   return (
-    <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0} width='100%'>
+    <MenuItem as="a" textStyle='secondary' backgroundColor="#0A0A0A" color="#edede9" pl={0} pr={0} width='100%'>
       <Link
-        color='#797979' fontSize='15px' w={['40%', '30%']} borderTop='1px solid #494949' textAlign='center'
+        color="#edede9" fontSize='15px' w={['40%', '30%']} borderTop='1px solid #494949' textAlign='center'
         borderBottom='1px solid #494949' borderRight='1px solid #494949' pt={2} pb={2}
         display='flex' justifyContent='center' alignItems='center' _hover={{ color: '#1DB954' }}
         href={currentTrack.url} target='_blank' rel="noopener noreferrer"
@@ -61,7 +66,7 @@ function SpotifyRecentlyPlayed({currentTrack}) {
             }}
             speed={20}
           >
-            <Text color='white' fontSize='15px' pt={2} pb={2} mr={20}>{currentTrack.title} - {currentTrack.artist}</Text>
+            <Text color="#edede9" fontSize='15px' pt={2} pb={2} mr={20}>{currentTrack.title} - {currentTrack.artist}</Text>
           </Marquee>
         </LinkOverlay>
       </LinkBox>
@@ -75,6 +80,7 @@ export default function NavigationMenu({}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const NavigationPageLabel = `/${currentForm.toUpperCase()}`;
   const [result, setResult] = useState({});
+  const { colorMode, toggleColorMode } = useColorMode();
   
   useEffect(() => {
     Promise.all([
@@ -118,12 +124,20 @@ export default function NavigationMenu({}) {
             )}
           </Flex>
         </MenuButton>
-        <MenuList color='black' backgroundColor='#0A0A0A' border='0px' boxShadow='0px 0px 8px -4px white' borderRadius='5px' p={0}>
+        <MenuList
+          color="#edede9"
+          backgroundColor="#0A0A0A"
+          border="0px"
+          boxShadow="0px 0px 8px -4px white"
+          borderRadius="5px"
+          overflow="hidden"
+          p={0}
+        >
           <NavigationItem name='Home' url='/' setCurrentForm={setCurrentForm} isDisabled={false} />
           <NavigationItem name='Projects' url='/projects' setCurrentForm={setCurrentForm} isDisabled={false} />
           <MenuItem
             as="a" textAlign='center' fontSize='3xl' textStyle='secondary'
-            backgroundColor='#0A0A0A' color='white'
+            backgroundColor="#0A0A0A" color="#edede9"
           >
             <ChakraLink as={ReactRouterLink} to={Resume} target="newTab" width='100%' _hover={{ textDecoration: "none", color: '#494949' }}>
               Resumé
@@ -132,17 +146,34 @@ export default function NavigationMenu({}) {
           <MenuItem
             as="a" onClick={() => setCurrentForm('Photo')}
             textAlign='center' fontSize='3xl' textStyle='secondary'
-            backgroundColor='#0A0A0A' color='white' isDisabled={true}
+            backgroundColor="#0A0A0A" color="#edede9" isDisabled={true}
           >
             <Text textAlign='center' width='100%'>
               Photo<sup style={{ fontSize: '20px' }}>(WIP)</sup>
             </Text>
           </MenuItem>
           <SpotifyRecentlyPlayed currentTrack={{ title: result.title, artist: result.artist, url: result.url }} />
-          <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
-            <Flex justify='center' align='center' color='#797979' pb={1}>
-              <Icon as={MdCopyright} fontSize='11px' />
-              <Text color='#797979' fontSize='12px' pl={1}>2025 NICO RAYMUNDO</Text>
+          <MenuItem id="navigation.footer" as="a" textStyle='secondary' p={0} pl={4} pr={2} backgroundColor="#0A0A0A">
+            <Flex justify="space-between" align="center" w="100%" pb={1}>
+              <Flex align="center" color="#797979">
+                <Icon as={MdCopyright} fontSize="11px" />
+                <Text fontSize="12px" pl={1}>
+                  2025 NICO RAYMUNDO
+                </Text>
+              </Flex>
+
+              <Button
+                size="xs"
+                variant="ghost"
+                color="#edede9"
+                onClick={toggleColorMode}
+                _hover={{ bg: "transparent", color: "#797979" }}
+                leftIcon={
+                  <Icon as={colorMode === "light" ? MdDarkMode : MdLightMode} />
+                }
+              >
+                {colorMode === "light" ? "Dark" : "Light"}
+              </Button>
             </Flex>
           </MenuItem>
         </MenuList>

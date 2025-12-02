@@ -1,8 +1,12 @@
-// importing the required chakra libraries
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react";
+
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 
 const theme = extendTheme({
-  // Whatever you pass here will be ADDED to the theme.
+  config,
   textStyles: { 
     primary: {
       fontFamily: `'Texturina Variable', sans-serif`,
@@ -14,5 +18,4 @@ const theme = extendTheme({
   },
 });
 
-// export our theme
-export default theme
+export default theme;
