@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   return (
-    <SimpleGrid color='#252627' w='100%' mt={20} pl={[5, 10]} pr={[5, 10]} columns={1} spacing={20} display='flex' flexDirection='column' alignItems='center' mb={20}>
+    <SimpleGrid w='100%' mt={20} pl={[5, 10]} pr={[5, 10]} columns={1} spacing={20} display='flex' flexDirection='column' alignItems='center' mb={20}>
       <ProjectCard
         name='Spotify Stats'
         year='2023'

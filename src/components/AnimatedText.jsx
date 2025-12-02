@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion"
 
-export default function AnimatedText({ delay, text }) {
+export default function AnimatedText({ delay = 0, text }) {
   const textIndex = useMotionValue(0);
   const baseText = text;
   const count = useMotionValue(0);
@@ -27,10 +27,10 @@ export default function AnimatedText({ delay, text }) {
   };
 
   useEffect(() => {
-    animate(count, 132, {
+    animate(count, baseText.length, {
       type: "tween",
       delay: delay,
-      duration: 2.5,
+      duration: 10,
       ease: "easeIn",
       onUpdate() {
         textIndex.set(0);

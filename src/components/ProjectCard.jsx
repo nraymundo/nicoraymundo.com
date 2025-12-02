@@ -1,10 +1,12 @@
-import { Box, Flex, Text, IconButton, Link } from "@chakra-ui/react"
+import { Box, Flex, Text, IconButton, Link, useColorModeValue } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard({name, year, description, tech, image, githubUrl}) {
+  const textColor = useColorModeValue("#252627", "#edede9");
+
   return (
-    <Box w={['100%', '90%']} color='#252627'>
+    <Box w={['100%', '90%']} color={textColor}>
       <Flex justify='space-between' align='center' mt={2}>
         <Text textStyle='secondary' fontSize={['xl', '4xl']} whiteSpace='nowrap' fontWeight={700}>{name}</Text>
         <motion.div
