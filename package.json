@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "homepage": "https://nraymundo.github.io/nicoraymundo.com-v2",
   "type": "module",
+  "engines": {
+    "node": "24.x",
+    "npm": ">=11"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
