@@ -90,7 +90,7 @@ export default function About() {
             positions={(
               <Box textAlign={'left'}>
                 <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>Engineer II</Text>
-                <Text fontSize='md' mt={5} _selection={{ color: '#9DAE9E' }} fontWeight={300}>Engineer III</Text>
+                <Text fontSize='md' mt={5} _selection={{ color: '#9DAE9E' }} fontWeight={300}>Engineer I</Text>
               </Box>
             )}
             dates={(
