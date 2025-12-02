@@ -1,7 +1,7 @@
 import { Box, Text, Grid, GridItem, Link, useColorModeValue} from "@chakra-ui/react"
 import AnimatedText from "../components/AnimatedText"
 
-const introText = "Hi, I'm Nico. I'm a full-stack software engineer from the San Francisco Bay Area, currently in New York City and at American Express."
+const introText = "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at American Express."
 const aboutText = `I’m a software engineer who enjoys building clean, reliable web applications. I like taking ideas from concept to 
 production and focusing on solutions that are simple, scalable, and easy to maintain.`
 const aboutText2 = `I’ve worked across both web and mobile platforms and picked up experience with a variety of tools and frameworks 
@@ -86,7 +86,7 @@ export default function About() {
           gap={5}
           mt={5}
         >
-          <CVGridHeader rows={[1, 2]} isSectionHeader={true} text='Curriculum Vitae' />
+          <CVGridHeader rows={[1, 4]} isSectionHeader={true} text='Curriculum Vitae' />
           <CVGridHeader rows={1} text='American Express' />
           <CVGridInfo
             positions={(
@@ -99,6 +99,32 @@ export default function About() {
               <Box textAlign={'left'}>
                 <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>2023 - Present</Text>
                 <Text fontSize='md' mt={5} _selection={{ color: '#9DAE9E' }} fontWeight={300}>2021 - 2023</Text>
+              </Box>
+            )}
+          />
+          <CVGridHeader rows={1} text='Maxim Integrated' />
+          <CVGridInfo
+            positions={(
+              <Box textAlign={'left'}>
+                <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>IT Business Intelligence Intern</Text>
+              </Box>
+            )}
+            dates={(
+              <Box textAlign={'left'}>
+                <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>2020</Text>
+              </Box>
+            )}
+          />
+          <CVGridHeader rows={1} text='LMU Computer Science' />
+          <CVGridInfo
+            positions={(
+              <Box textAlign={'left'}>
+                <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>Teaching Assistant </Text>
+              </Box>
+            )}
+            dates={(
+              <Box textAlign={'left'}>
+                <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>2018 - 2020</Text>
               </Box>
             )}
           />
