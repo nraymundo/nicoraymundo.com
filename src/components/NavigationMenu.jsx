@@ -142,7 +142,7 @@ export default function NavigationMenu({}) {
           <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
             <Flex justify='center' align='center' color='#797979' pb={1}>
               <Icon as={MdCopyright} fontSize='11px' />
-              <Text color='#797979' fontSize='12px' pl={1}>2023 NICO RAYMUNDO</Text>
+              <Text color='#797979' fontSize='12px' pl={1}>2025 NICO RAYMUNDO</Text>
             </Flex>
           </MenuItem>
         </MenuList>
