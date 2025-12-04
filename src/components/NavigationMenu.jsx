@@ -51,7 +51,6 @@ function NavigationItem({ name, url, isDisabled }) {
             position: "absolute",
             inset: 0,
             borderRadius: 4,
-            background: "#171717",
           }}
           transition={{ type: "spring", stiffness: 400, damping: 30 }}
         />
