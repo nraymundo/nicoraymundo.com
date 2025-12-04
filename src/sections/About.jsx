@@ -9,7 +9,7 @@ import {
 import AnimatedText from "../components/AnimatedText";
 
 const introText =
-  "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at ";
+  "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at American Express.";
 const aboutText = `I’m a software engineer who enjoys building clean, reliable web applications. I like taking ideas from concept to 
 production and focusing on solutions that are simple, scalable, and easy to maintain.`;
 const aboutText2 = `I’ve worked across both web and mobile platforms and picked up experience with a variety of tools and frameworks 
@@ -73,8 +73,8 @@ export default function About() {
         _selection={{ color: "#9DAE9E" }}
         textAlign="left"
       >
-        {/* <AnimatedText text={introText} /> */}
-        {introText}{" "}
+        <AnimatedText text={introText} link={"American Express"} />
+        {/* {introText}{" "}
         <Link
           href="#"
           _hover={{ textDecoration: "none", color: "#016FD0" }}
@@ -84,7 +84,7 @@ export default function About() {
         >
           American Express
         </Link>
-        .
+        . */}
       </Box>
       <Box h={0.8} mt={5} backgroundColor="#494949" />
       <Box textStyle="secondary">
