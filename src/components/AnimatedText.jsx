@@ -44,8 +44,9 @@ export default function AnimatedHeadline({ text, link }) {
             <>
               <MotionLink
                 key={i}
-                as={ReactRouterLink}
-                to="/projects"
+                href="https://americanexpress.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 _hover={{ textDecoration: "none", color: "#016FD0" }}
                 _selection={{ color: "#016FD0" }}
                 variants={wordVariant}
