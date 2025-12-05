@@ -1,19 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
-import theme from "./theme";
 import "@fontsource-variable/texturina";
 import "@fontsource/ubuntu/300.css";
 import "@fontsource/ubuntu/500.css";
 import "@fontsource/ubuntu/700.css";
-import Projects from "./sections/Projects";
-import About from "./sections/About";
-import PhotoJournal from "./sections/PhotoJournal.jsx";
-import PhotoSetRoute from "./routes/PhotoSetRoute.jsx";
+import theme from "./theme";
+import App from "./App.jsx";
+import "./index.css";
+import { Projects, About, PhotoJournal } from "./sections";
+import { PhotoSetRoute, ProjectSetRoute } from "./routes";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +39,14 @@ const router = createBrowserRouter([
         element: (
           <React.Suspense fallback={<div>Loading photos…</div>}>
             <PhotoSetRoute />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: "projects/:slug",
+        element: (
+          <React.Suspense fallback={<div>Loading photos…</div>}>
+            <ProjectSetRoute />
           </React.Suspense>
         ),
       },

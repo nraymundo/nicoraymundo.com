@@ -1,9 +1,8 @@
-import { Flex, Image, SimpleGrid, Box, Text, Link } from "@chakra-ui/react";
-import { photos } from "../utils/photos";
+import { Flex, Image, SimpleGrid, Box, Text } from "@chakra-ui/react";
 
 export default function PhotoSet({ title, images }) {
   return (
-    <div className="journal-page">
+    <div className={`${title}-photos`}>
       <Box key="london_edinburgh">
         <Flex mt="100px" justify="center">
           <Text textStyle="primary" fontSize={["3xl", "5xl"]} fontWeight={500}>

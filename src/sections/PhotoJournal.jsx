@@ -56,7 +56,7 @@ export default function PhotoJournal() {
             <Link
               as={ReactRouterLink}
               to={entry.path}
-              _hover={{ textDecoration: "none", color: "#494949" }}
+              _hover={{ textDecoration: "none", color: "#F0A202" }}
               display="inline-flex"
               alignItems="center"
               position="relative"

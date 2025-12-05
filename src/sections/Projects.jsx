@@ -17,6 +17,7 @@ export default function Projects() {
     >
       <ProjectCard
         name="WHOOP Grid"
+        path="whoop-grid"
         year="2025"
         description="A dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps."
         tech={
@@ -56,7 +57,14 @@ export default function Projects() {
           </Flex>
         }
         image={
-          <Flex justify="center" backgroundColor="#E9E3DD" mt={2} mb={2}>
+          <Flex
+            justify="center"
+            backgroundColor="#E9E3DD"
+            mt={2}
+            mb={2}
+            _hover={{ bg: "#797979" }}
+            borderRadius={10}
+          >
             <Image
               fit="cover"
               align="center top"
@@ -66,10 +74,12 @@ export default function Projects() {
             />
           </Flex>
         }
+        projectUrl="https://whoop-grid.vercel.app"
         githubUrl="https://github.com/nraymundo/whoop-grid"
       />
       <ProjectCard
         name="Spotify Stats"
+        path="spotify-stats"
         year="2023"
         description="A mobile app built with React Native and the Spotify API to display a user's top stats."
         tech={
@@ -135,48 +145,6 @@ export default function Projects() {
           </Flex>
         }
         githubUrl="https://github.com/nraymundo/spotify-test"
-      />
-      <ProjectCard
-        name="Nicoraymundo.com"
-        year="2023"
-        description="A personal portfolio/website built with ReactJS, Chakra UI, and Framer. Deployed via Vercel."
-        tech={
-          <Flex direction="row">
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              ReactJS
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              Chakra UI
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              Framer Motion
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              Vercel
-            </Text>
-          </Flex>
-        }
-        githubUrl="https://github.com/nraymundo/nicoraymundo.com-v2"
       />
       <ProjectCard
         name="Pivot"

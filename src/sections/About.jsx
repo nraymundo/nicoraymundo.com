@@ -16,7 +16,7 @@ function CVGridHeader({ rows, text, isSectionHeader }) {
         <Text
           fontSize="md"
           fontWeight={isSectionHeader ? 700 : 500}
-          _selection={{ color: "#9DAE9E" }}
+          _selection={{ color: "#F0A202" }}
         >
           {text}
         </Text>
@@ -61,7 +61,7 @@ export default function About() {
       <Box
         fontSize={["3xl", "6xl"]}
         textStyle="primary"
-        _selection={{ color: "#9DAE9E" }}
+        _selection={{ color: "#F0A202" }}
         textAlign="left"
       >
         <AnimatedText text={introText} link={"American Express"} />
@@ -90,7 +90,7 @@ export default function About() {
               <Text
                 fontSize="md"
                 fontWeight={700}
-                _selection={{ color: "#9DAE9E" }}
+                _selection={{ color: "#F0A202" }}
               >
                 About
               </Text>
@@ -100,7 +100,7 @@ export default function About() {
             <Box textAlign={"left"}>
               <Text
                 fontSize="md"
-                _selection={{ color: "#9DAE9E" }}
+                _selection={{ color: "#F0A202" }}
                 fontWeight={300}
                 whiteSpace="pre-line"
               >
@@ -129,7 +129,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   Engineer II
@@ -137,7 +137,7 @@ export default function About() {
                 <Text
                   fontSize="md"
                   mt={5}
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   Engineer I
@@ -148,7 +148,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   2023 - Present
@@ -156,7 +156,7 @@ export default function About() {
                 <Text
                   fontSize="md"
                   mt={5}
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   2021 - 2023
@@ -170,7 +170,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   IT Business Intelligence Intern
@@ -181,7 +181,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   2020
@@ -195,7 +195,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   Teaching Assistant{" "}
@@ -206,7 +206,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   2018 - 2020
@@ -220,7 +220,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   Bachelor of Arts, Computer Science
@@ -231,7 +231,7 @@ export default function About() {
               <Box textAlign={"left"}>
                 <Text
                   fontSize="md"
-                  _selection={{ color: "#9DAE9E" }}
+                  _selection={{ color: "#F0A202" }}
                   fontWeight={300}
                 >
                   2017 - 2021
