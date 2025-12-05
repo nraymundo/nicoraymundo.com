@@ -1,13 +1,19 @@
-import "./App.css";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLayoutEffect } from "react";
 
 function App() {
   const bg = useColorModeValue("#edede9", "#0A0A0A");
   const location = useLocation();
+
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+  }, [location.pathname]);
 
   return (
     <Box
@@ -19,8 +25,9 @@ function App() {
       flexDirection="column"
     >
       <Header />
+
       <Box as="main" flex="1">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="wait">
           <Box
             as={motion.div}
             key={location.pathname}
@@ -35,6 +42,7 @@ function App() {
           </Box>
         </AnimatePresence>
       </Box>
+
       <Footer />
     </Box>
   );

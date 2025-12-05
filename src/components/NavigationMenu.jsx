@@ -208,6 +208,7 @@ export default function NavigationMenu({}) {
         >
           <NavigationItem name="Home" url="/" isDisabled={false} />
           <NavigationItem name="Projects" url="/projects" isDisabled={false} />
+          <NavigationItem name="Photo" url="/photo" isDisabled={false} />
           <MenuItem
             as="a"
             textAlign="center"
@@ -225,19 +226,6 @@ export default function NavigationMenu({}) {
             >
               Resumé
             </ChakraLink>
-          </MenuItem>
-          <MenuItem
-            as="a"
-            textAlign="center"
-            fontSize="3xl"
-            textStyle="secondary"
-            backgroundColor="#0A0A0A"
-            color="#edede9"
-            isDisabled={true}
-          >
-            <Text textAlign="center" width="100%">
-              Photo<sup style={{ fontSize: "20px" }}>(WIP)</sup>
-            </Text>
           </MenuItem>
           <SpotifyRecentlyPlayed
             currentTrack={{

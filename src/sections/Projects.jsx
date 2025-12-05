@@ -1,8 +1,8 @@
 import { Flex, Text, Image, SimpleGrid } from "@chakra-ui/react";
-import TopTracksHome from "../assets/toptracks-home-screen.png";
-import TopTracksArtists from "../assets/toptracks-artists-screen.png";
-import TopTracksTracks from "../assets/toptracks-tracks-screen.png";
-import WhoopGrid from "../assets/whoop-grid.png";
+import TopTracksHome from "/app_screenshots/toptracks-home-screen.png";
+import TopTracksArtists from "/app_screenshots/toptracks-artists-screen.png";
+import TopTracksTracks from "/app_screenshots/toptracks-tracks-screen.png";
+import WhoopGrid from "/app_screenshots/whoop-grid.png";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {

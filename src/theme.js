@@ -1,6 +1,4 @@
-import { extendTheme, useColorModeValue } from "@chakra-ui/react";
-
-// const bg = useColorModeValue("#edede9", "#0A0A0A");
+import { extendTheme } from "@chakra-ui/react";
 
 const config = {
   initialColorMode: "dark",

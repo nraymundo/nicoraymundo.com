@@ -12,6 +12,8 @@ import "@fontsource/ubuntu/500.css";
 import "@fontsource/ubuntu/700.css";
 import Projects from "./sections/Projects";
 import About from "./sections/About";
+import PhotoJournal from "./sections/PhotoJournal.jsx";
+import PhotoSetRoute from "./routes/PhotoSetRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,22 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />,
+      },
+      {
+        path: "photo",
+        element: (
+          <React.Suspense fallback={<div>Loading photos…</div>}>
+            <PhotoJournal />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: "photo/:slug",
+        element: (
+          <React.Suspense fallback={<div>Loading photos…</div>}>
+            <PhotoSetRoute />
+          </React.Suspense>
+        ),
       },
     ],
   },
