@@ -60,11 +60,10 @@ export default function PhotoJournal() {
               display="inline-flex"
               alignItems="center"
               position="relative"
-              zIndex={1}
             >
               <Text
                 textStyle="secondary"
-                fontSize={["sm", "xl"]}
+                fontSize={["md", "xl"]}
                 fontWeight={500}
               >
                 {entry.place}
@@ -72,7 +71,7 @@ export default function PhotoJournal() {
 
               <Text
                 textStyle="secondary"
-                fontSize={["sm", "xl"]}
+                fontSize={["md", "xl"]}
                 fontWeight={700}
                 ml={2}
               >
@@ -81,7 +80,7 @@ export default function PhotoJournal() {
 
               <Text
                 textStyle="secondary"
-                fontSize={["sm", "xl"]}
+                fontSize={["md", "xl"]}
                 fontWeight={500}
                 ml={2}
               >

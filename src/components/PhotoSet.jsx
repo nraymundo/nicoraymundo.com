@@ -6,7 +6,7 @@ export default function PhotoSet({ title, images }) {
     <div className="journal-page">
       <Box key="london_edinburgh">
         <Flex mt="100px" justify="center">
-          <Text textStyle="primary" fontSize={["2xl", "5xl"]} fontWeight={500}>
+          <Text textStyle="primary" fontSize={["3xl", "5xl"]} fontWeight={500}>
             {title}
           </Text>
         </Flex>

@@ -1,8 +1,4 @@
 import { Flex, Text, Image, SimpleGrid } from "@chakra-ui/react";
-import TopTracksHome from "/app_screenshots/toptracks-home-screen.png";
-import TopTracksArtists from "/app_screenshots/toptracks-artists-screen.png";
-import TopTracksTracks from "/app_screenshots/toptracks-tracks-screen.png";
-import WhoopGrid from "/app_screenshots/whoop-grid.png";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
@@ -22,7 +18,7 @@ export default function Projects() {
       <ProjectCard
         name="WHOOP Grid"
         year="2025"
-        description="A personal fitness dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps."
+        description="A dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps."
         tech={
           <Flex direction="row">
             <Text
@@ -62,12 +58,10 @@ export default function Projects() {
         image={
           <Flex justify="center" backgroundColor="#E9E3DD" mt={2} mb={2}>
             <Image
-              // boxSize={[500, 800]}
               fit="cover"
               align="center top"
-              src={WhoopGrid}
+              src="/app_screenshots/whoop-grid.jpg"
               alt="Whoop Grid"
-              // mt={2}
             />
           </Flex>
         }
@@ -76,7 +70,7 @@ export default function Projects() {
       <ProjectCard
         name="Spotify Stats"
         year="2023"
-        description="A mobile app built using React Native and the Spotify API to display a user's top stats."
+        description="A mobile app built with React Native and the Spotify API to display a user's top stats."
         tech={
           <Flex direction="row">
             <Text
@@ -111,7 +105,7 @@ export default function Projects() {
               boxSize={[150, 250]}
               fit="cover"
               align="center top"
-              src={TopTracksHome}
+              src="/app_screenshots/toptracks-home-screen.png"
               alt="Top Tracks Home Screen"
               mt={2}
             />
@@ -119,7 +113,7 @@ export default function Projects() {
               boxSize={[150, 250]}
               fit="cover"
               align="center top"
-              src={TopTracksArtists}
+              src="/app_screenshots/toptracks-artists-screen.png"
               alt="Top Tracks Artists Screen"
               mt={2}
             />
@@ -127,7 +121,7 @@ export default function Projects() {
               boxSize={[150, 250]}
               fit="cover"
               align="center top"
-              src={TopTracksTracks}
+              src="/app_screenshots/toptracks-tracks-screen.png"
               alt="Top Tracks Tracks Screen"
               mt={2}
             />
@@ -138,7 +132,7 @@ export default function Projects() {
       <ProjectCard
         name="Nicoraymundo.com"
         year="2023"
-        description="A personal portfolio/website built using ReactJS, Chakra UI, and Framer."
+        description="A personal portfolio/website built with ReactJS, Chakra UI, and Framer. Deployed via Vercel."
         tech={
           <Flex direction="row">
             <Text
