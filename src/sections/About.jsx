@@ -1,22 +1,13 @@
-import {
-  Box,
-  Text,
-  Grid,
-  GridItem,
-  Link,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Text, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import AnimatedText from "../components/AnimatedText";
 
 const introText =
   "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at American Express.";
-const aboutText = `I’m a software engineer who enjoys building clean, reliable web applications. I like taking ideas from concept to 
-production and focusing on solutions that are simple, scalable, and easy to maintain.`;
-const aboutText2 = `I’ve worked across both web and mobile platforms and picked up experience with a variety of tools and frameworks 
-along the way. I’m drawn to solving real problems, writing thoughtful code, and constantly improving how things work behind the scenes.`;
-const aboutText3 = `I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with
-teams to design and implement solutions to streamline the onboarding process, ensuring a seamless and efficient journey for our clients.
-Outside of work, I enjoy looking for new restaurants to try in the city, running the Central Park loop, and playing basketball and soccer.`;
+
+const aboutText =
+  "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and slowly shaping them through iteration and refinement.\n\n" +
+  "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process, ensuring a reliable and efficient journey for our clients.\n\n" +
+  "Outside of work, I enjoy looking for new restaurants to try in the city, running the Central Park loop, and traveling with friends and family, taking photos along the way.";
 
 function CVGridHeader({ rows, text, isSectionHeader }) {
   return (
@@ -111,24 +102,9 @@ export default function About() {
                 fontSize="md"
                 _selection={{ color: "#9DAE9E" }}
                 fontWeight={300}
+                whiteSpace="pre-line"
               >
                 {aboutText}
-              </Text>
-              <br />
-              <Text
-                fontSize="md"
-                _selection={{ color: "#9DAE9E" }}
-                fontWeight={300}
-              >
-                {aboutText2}
-              </Text>
-              <br />
-              <Text
-                fontSize="md"
-                _selection={{ color: "#9DAE9E" }}
-                fontWeight={300}
-              >
-                {aboutText3}
               </Text>
             </Box>
           </GridItem>

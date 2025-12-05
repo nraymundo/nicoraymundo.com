@@ -62,6 +62,7 @@ export default function Projects() {
               align="center top"
               src="/app_screenshots/whoop-grid.jpg"
               alt="Whoop Grid"
+              borderRadius={10}
             />
           </Flex>
         }
@@ -100,7 +101,13 @@ export default function Projects() {
           </Flex>
         }
         image={
-          <Flex justify="center" backgroundColor="#E9E3DD" mt={2} mb={2}>
+          <Flex
+            justify="center"
+            backgroundColor="#E9E3DD"
+            mt={2}
+            mb={2}
+            borderRadius={10}
+          >
             <Image
               boxSize={[150, 250]}
               fit="cover"
