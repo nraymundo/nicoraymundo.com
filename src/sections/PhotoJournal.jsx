@@ -4,6 +4,18 @@ import { photos } from "../utils/photos";
 
 const entries = [
   {
+    place: "Italy",
+    date: "01.2025",
+    images: photos.italy,
+    path: "italy",
+  },
+  {
+    place: "New Mexico",
+    date: "10.2024",
+    images: photos.new_mexico,
+    path: "new-mexico",
+  },
+  {
     place: "London & Edinburgh",
     date: "03.2020",
     images: photos.lon_edi,

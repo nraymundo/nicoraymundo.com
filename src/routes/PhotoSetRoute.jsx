@@ -4,6 +4,16 @@ import PhotoSet from "../components/PhotoSet";
 
 const photoSets = [
   {
+    title: "Italy '25",
+    imageKey: "italy",
+    path: "italy",
+  },
+  {
+    title: "New Mexico '24",
+    imageKey: "new_mexico",
+    path: "new-mexico",
+  },
+  {
     title: "London & Edinburgh '20",
     imageKey: "lon_edi",
     path: "london-edinburgh",
