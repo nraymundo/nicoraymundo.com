@@ -20,7 +20,7 @@ export default function Projects() {
       mb={20}
     >
       <ProjectCard
-        name="Whoop Grid"
+        name="WHOOP Grid"
         year="2025"
         description="A personal fitness dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps."
         tech={
