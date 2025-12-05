@@ -10,7 +10,7 @@ const entries = [
     path: "italy",
   },
   {
-    place: "New Mexico",
+    place: "New Mexico Badlands & Balloon Fiesta",
     date: "10.2024",
     images: photos.new_mexico,
     path: "new-mexico",

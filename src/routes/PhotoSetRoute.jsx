@@ -9,7 +9,7 @@ const photoSets = [
     path: "italy",
   },
   {
-    title: "New Mexico '24",
+    title: "New Mexico Badlands & Balloon Fiesta '24",
     imageKey: "new_mexico",
     path: "new-mexico",
   },
