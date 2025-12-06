@@ -27,7 +27,7 @@ function App() {
       <Header />
 
       <Box as="main" flex="1">
-        <AnimatePresence initial={false} mode="wait">
+        <AnimatePresence mode="wait">
           <Box
             as={motion.div}
             key={location.pathname}

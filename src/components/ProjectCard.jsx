@@ -30,7 +30,7 @@ export default function ProjectCard({
         <Link
           as={ReactRouterLink}
           to={path}
-          _hover={{ textDecoration: "none", color: "#797979" }}
+          _hover={{ textDecoration: "none", color: "#494949" }}
           display="inline-flex"
           alignItems="center"
           position="relative"
@@ -45,9 +45,11 @@ export default function ProjectCard({
           </Text>
         </Link>
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
           style={{
+            width: "100%",
             height: 0.8,
             backgroundColor: "#494949",
             marginLeft: 15,
@@ -85,7 +87,12 @@ export default function ProjectCard({
             mb={2}
           >
             <Flex justify="center" align="center" height="100%">
-              <Text textStyle="primary" fontSize={["4xl"]} fontWeight={700}>
+              <Text
+                textStyle="primary"
+                fontSize={["4xl"]}
+                fontWeight={700}
+                textColor="#edede9"
+              >
                 View Details
               </Text>
             </Flex>
@@ -104,9 +111,11 @@ export default function ProjectCard({
       <Flex justify="space-between" align="center" mt={2}>
         {tech}
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
           style={{
+            width: "100%",
             height: 0.8,
             backgroundColor: "#494949",
             marginLeft: 15,

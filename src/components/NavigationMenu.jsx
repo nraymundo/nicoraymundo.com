@@ -247,7 +247,7 @@ export default function NavigationMenu({}) {
               <Flex align="center" color="#797979">
                 <Icon as={MdCopyright} fontSize="11px" />
                 <Text fontSize="12px" pl={1}>
-                  2025 NICO RAYMUNDO
+                  2025
                 </Text>
               </Flex>
 

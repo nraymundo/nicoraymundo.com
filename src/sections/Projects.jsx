@@ -19,7 +19,7 @@ export default function Projects() {
         name="WHOOP Grid"
         path="whoop-grid"
         year="2025"
-        description="A dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps."
+        description="A dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps. Hosted on Vercel."
         tech={
           <Flex direction="row">
             <Text
@@ -71,6 +71,7 @@ export default function Projects() {
               src="/app_screenshots/whoop-grid.jpg"
               alt="Whoop Grid"
               borderRadius={10}
+              loading="lazy"
             />
           </Flex>
         }
@@ -125,6 +126,7 @@ export default function Projects() {
               src="/app_screenshots/toptracks-home-screen.png"
               alt="Top Tracks Home Screen"
               mt={2}
+              loading="lazy"
             />
             <Image
               boxSize={[150, 250]}
@@ -133,6 +135,7 @@ export default function Projects() {
               src="/app_screenshots/toptracks-artists-screen.png"
               alt="Top Tracks Artists Screen"
               mt={2}
+              loading="lazy"
             />
             <Image
               boxSize={[150, 250]}
@@ -141,6 +144,7 @@ export default function Projects() {
               src="/app_screenshots/toptracks-tracks-screen.png"
               alt="Top Tracks Tracks Screen"
               mt={2}
+              loading="lazy"
             />
           </Flex>
         }

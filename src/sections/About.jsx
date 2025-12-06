@@ -13,11 +13,7 @@ function CVGridHeader({ rows, text, isSectionHeader }) {
   return (
     <GridItem rowSpan={rows} colSpan={[12, 2]}>
       <Box textAlign={"left"}>
-        <Text
-          fontSize="md"
-          fontWeight={isSectionHeader ? 700 : 500}
-          _selection={{ color: "#F0A202" }}
-        >
+        <Text fontSize="md" fontWeight={700} _selection={{ color: "#F0A202" }}>
           {text}
         </Text>
       </Box>
@@ -34,10 +30,32 @@ function CVGridInfo({ positions, dates }) {
         gap={4}
       >
         <GridItem rowSpan={2} colSpan={[8, 6]}>
-          {positions}
+          <Box textAlign={"left"}>
+            {positions.map((position, i) => (
+              <Text
+                fontSize="md"
+                _selection={{ color: "#F0A202" }}
+                fontWeight={400}
+                mt={i > 0 ? 5 : 0}
+              >
+                {position}
+              </Text>
+            ))}
+          </Box>
         </GridItem>
         <GridItem rowSpan={2} colSpan={[4, 2]}>
-          {dates}
+          <Box textAlign={"left"}>
+            {dates.map((date, i) => (
+              <Text
+                fontSize="md"
+                _selection={{ color: "#F0A202" }}
+                fontWeight={400}
+                mt={i > 0 ? 5 : 0}
+              >
+                {date}
+              </Text>
+            ))}
+          </Box>
         </GridItem>
       </Grid>
     </GridItem>
@@ -101,7 +119,7 @@ export default function About() {
               <Text
                 fontSize="md"
                 _selection={{ color: "#F0A202" }}
-                fontWeight={300}
+                fontWeight={400}
                 whiteSpace="pre-line"
               >
                 {aboutText}
@@ -118,126 +136,26 @@ export default function About() {
           gap={5}
           mt={5}
         >
-          <CVGridHeader
-            rows={[1, 4]}
-            isSectionHeader={true}
-            text="Curriculum Vitae"
-          />
+          <CVGridHeader rows={[1, 4]} text="Curriculum Vitae" />
           <CVGridHeader rows={1} text="American Express" />
           <CVGridInfo
-            positions={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  Engineer II
-                </Text>
-                <Text
-                  fontSize="md"
-                  mt={5}
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  Engineer I
-                </Text>
-              </Box>
-            }
-            dates={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  2023 - Present
-                </Text>
-                <Text
-                  fontSize="md"
-                  mt={5}
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  2021 - 2023
-                </Text>
-              </Box>
-            }
+            positions={["Engineer II", "Engineer I"]}
+            dates={["2023 - Present", "2021 - 2023"]}
           />
           <CVGridHeader rows={1} text="Maxim Integrated" />
           <CVGridInfo
-            positions={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  IT Business Intelligence Intern
-                </Text>
-              </Box>
-            }
-            dates={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  2020
-                </Text>
-              </Box>
-            }
+            positions={["IT Business Intelligence Intern"]}
+            dates={["2020"]}
           />
           <CVGridHeader rows={1} text="LMU Computer Science" />
           <CVGridInfo
-            positions={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  Teaching Assistant{" "}
-                </Text>
-              </Box>
-            }
-            dates={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  2018 - 2020
-                </Text>
-              </Box>
-            }
+            positions={["Teaching Assistant"]}
+            dates={["2018 - 2020"]}
           />
           <CVGridHeader rows={1} text="Loyola Marymount University" />
           <CVGridInfo
-            positions={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  Bachelor of Arts, Computer Science
-                </Text>
-              </Box>
-            }
-            dates={
-              <Box textAlign={"left"}>
-                <Text
-                  fontSize="md"
-                  _selection={{ color: "#F0A202" }}
-                  fontWeight={300}
-                >
-                  2017 - 2021
-                </Text>
-              </Box>
-            }
+            positions={["Bachelor of Arts, Computer Science"]}
+            dates={["2017 - 2021"]}
           />
         </Grid>
       </Box>
