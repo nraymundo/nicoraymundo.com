@@ -30,7 +30,7 @@ export default function ProjectCard({
         <Link
           as={ReactRouterLink}
           to={path}
-          _hover={{ textDecoration: "none", color: "#494949" }}
+          _hover={{ textDecoration: "none", color: "#797979" }}
           display="inline-flex"
           alignItems="center"
           position="relative"
@@ -51,7 +51,7 @@ export default function ProjectCard({
           style={{
             width: "100%",
             height: 0.8,
-            backgroundColor: "#494949",
+            backgroundColor: "#797979",
             marginLeft: 15,
             marginRight: 15,
           }}
@@ -63,7 +63,8 @@ export default function ProjectCard({
           {year}
         </Text>
       </Flex>
-      <Link as={ReactRouterLink} to={path} _hover={{ textDecoration: "none" }}>
+      {image}
+      {/* <Link as={ReactRouterLink} to={path} _hover={{ textDecoration: "none" }}>
         <Box
           position="relative"
           role="group"
@@ -98,13 +99,13 @@ export default function ProjectCard({
             </Flex>
           </Box>
         </Box>
-      </Link>
+      </Link> */}
       <Text
         textStyle="secondary"
         fontSize={["md", "lg"]}
         mt={2}
         textAlign="left"
-        fontWeight={300}
+        fontWeight={400}
       >
         {description}
       </Text>

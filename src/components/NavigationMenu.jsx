@@ -38,7 +38,7 @@ function NavigationItem({ name, url, isDisabled }) {
       textAlign="center"
       fontSize="3xl"
       textStyle="secondary"
-      color="#edede9"
+      color="#F2F2F2"
       backgroundColor="#0A0A0A"
       isDisabled={isDisabled}
       overflow="hidden"
@@ -60,7 +60,7 @@ function NavigationItem({ name, url, isDisabled }) {
         as={ReactRouterLink}
         to={url}
         width="100%"
-        _hover={{ textDecoration: "none", color: "#494949" }}
+        _hover={{ textDecoration: "none", color: "#797979" }}
         position="relative"
         zIndex={1}
         py={2}
@@ -77,13 +77,13 @@ function SpotifyRecentlyPlayed({ currentTrack }) {
       as="a"
       textStyle="secondary"
       backgroundColor="#0A0A0A"
-      color="#edede9"
+      color="#F2F2F2"
       pl={0}
       pr={0}
       width="100%"
     >
       <Link
-        color="#edede9"
+        color="#F2F2F2"
         fontSize="15px"
         w={["40%", "30%"]}
         borderTop="1px solid #494949"
@@ -116,7 +116,7 @@ function SpotifyRecentlyPlayed({ currentTrack }) {
             }}
             speed={20}
           >
-            <Text color="#edede9" fontSize="15px" pt={2} pb={2} mr={20}>
+            <Text color="#F2F2F2" fontSize="15px" pt={2} pb={2} mr={20}>
               {currentTrack.title} - {currentTrack.artist}
             </Text>
           </Marquee>
@@ -154,7 +154,7 @@ export default function NavigationMenu({}) {
           w="100%"
           background="#0A0A0A !important"
           boxShadow="0px 2px 8px -4px white"
-          color="white"
+          color="#F2F2F2"
           borderRadius="5px"
           textDecoration="none"
           _hover={{ textDecoration: "none", backgroundColor: "#0A0A0A" }}
@@ -198,7 +198,7 @@ export default function NavigationMenu({}) {
           </Flex>
         </MenuButton>
         <MenuList
-          color="#edede9"
+          color="#F2F2F2"
           backgroundColor="#0A0A0A"
           border="0px"
           boxShadow="0px 0px 8px -4px white"
@@ -215,7 +215,7 @@ export default function NavigationMenu({}) {
             fontSize="3xl"
             textStyle="secondary"
             backgroundColor="#0A0A0A"
-            color="#edede9"
+            color="#F2F2F2"
           >
             <ChakraLink
               as={ReactRouterLink}
@@ -244,8 +244,8 @@ export default function NavigationMenu({}) {
             backgroundColor="#0A0A0A"
           >
             <Flex justify="space-between" align="center" w="100%" pb={1}>
-              <Flex align="center" color="#797979">
-                <Icon as={MdCopyright} fontSize="11px" />
+              <Flex align="center" color="#F2F2F2">
+                <Icon as={MdCopyright} fontSize="12px" />
                 <Text fontSize="12px" pl={1}>
                   2025
                 </Text>
@@ -254,7 +254,7 @@ export default function NavigationMenu({}) {
               <Button
                 size="xs"
                 variant="ghost"
-                color="#edede9"
+                color="#F2F2F2"
                 onClick={toggleColorMode}
                 _hover={{ bg: "transparent", color: "#797979" }}
                 leftIcon={

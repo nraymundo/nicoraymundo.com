@@ -9,9 +9,15 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function ContactLink({ name, url }) {
-  const textColor = useColorModeValue("#252627", "#edede9");
+  const textColor = useColorModeValue("#252627", "#F2F2F2");
 
   const MotionFlex = motion(Flex);
+  const MotionSpan = motion.span;
+
+  const iconVariants = {
+    rest: { x: 0, y: 0 },
+    hover: { x: 3, y: -3 },
+  };
 
   return (
     <GridItem colSpan={[6, 2]}>
@@ -22,10 +28,11 @@ export default function ContactLink({ name, url }) {
         rel="noopener noreferrer"
         color={textColor}
         textStyle="secondary"
+        fontWeight={700}
         align="center"
         _hover={{ color: "#F0A202" }}
-        whileHover={{ x: 3, y: -3 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        initial="rest"
+        whileHover="hover"
       >
         <Text
           _hover={{ textDecoration: "none", color: "#F0A202" }}
@@ -33,7 +40,14 @@ export default function ContactLink({ name, url }) {
         >
           {name}
         </Text>
-        <Icon as={MdOutlineArrowOutward} pl={1} />
+
+        <MotionSpan
+          variants={iconVariants}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          style={{ display: "inline-block" }}
+        >
+          <Icon as={MdOutlineArrowOutward} pl={1} />
+        </MotionSpan>
       </MotionFlex>
     </GridItem>
   );

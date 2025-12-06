@@ -84,7 +84,7 @@ export default function Projects() {
         year="2023"
         description="A mobile app built with React Native and the Spotify API to display a user's top stats."
         tech={
-          <Flex direction="row">
+          <Flex direction="row" fontWeight={400}>
             <Text
               textStyle="secondary"
               fontSize="sm"

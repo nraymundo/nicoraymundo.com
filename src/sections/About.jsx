@@ -7,7 +7,7 @@ const introText =
 const aboutText =
   "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and slowly shaping them through iteration and refinement.\n\n" +
   "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process, ensuring a reliable and efficient journey for our clients.\n\n" +
-  "Outside of work, I enjoy looking for new restaurants to try in the city, running the Central Park loop, and traveling with friends and family, taking photos along the way.";
+  "Outside of work, I enjoy looking for new restaurants to try in the city, running the Central Park loop, and traveling with friends and family.";
 
 function CVGridHeader({ rows, text, isSectionHeader }) {
   return (
@@ -63,15 +63,13 @@ function CVGridInfo({ positions, dates }) {
 }
 
 export default function About() {
-  const bg = useColorModeValue("#edede9", "#0A0A0A");
-  const textColor = useColorModeValue("#252627", "#edede9");
+  const textColor = useColorModeValue("#252627", "#F2F2F2");
 
   return (
     <Box
       w="100%"
       color={textColor}
       mt={[10, 20]}
-      bg={bg}
       pt={5}
       pl={[5, 10]}
       pr={[5, 10]}
@@ -81,6 +79,7 @@ export default function About() {
         textStyle="primary"
         _selection={{ color: "#F0A202" }}
         textAlign="left"
+        fontWeight={400}
       >
         <AnimatedText text={introText} link={"American Express"} />
         {/* {introText}{" "}

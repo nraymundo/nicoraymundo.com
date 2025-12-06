@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLayoutEffect } from "react";
 
 function App() {
-  const bg = useColorModeValue("#edede9", "#0A0A0A");
+  const bg = useColorModeValue("#F2F2F2", "#0A0A0A");
   const location = useLocation();
 
   useLayoutEffect(() => {
