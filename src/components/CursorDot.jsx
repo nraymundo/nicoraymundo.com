@@ -53,7 +53,7 @@ export default function CursorDot() {
         y: springY,
         width: 10,
         height: 10,
-        borderRadius: "999px",
+        borderRadius: "100%",
         // background: isDark ? "#F0A202" : "#F2F2F2",
         background: textColor,
         pointerEvents: "none",
