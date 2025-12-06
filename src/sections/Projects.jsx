@@ -71,7 +71,6 @@ export default function Projects() {
               src="/app_screenshots/whoop-grid.jpg"
               alt="Whoop Grid"
               borderRadius={10}
-              loading="lazy"
             />
           </Flex>
         }
@@ -126,7 +125,6 @@ export default function Projects() {
               src="/app_screenshots/toptracks-home-screen.png"
               alt="Top Tracks Home Screen"
               mt={2}
-              loading="lazy"
             />
             <Image
               boxSize={[150, 250]}
@@ -135,7 +133,6 @@ export default function Projects() {
               src="/app_screenshots/toptracks-artists-screen.png"
               alt="Top Tracks Artists Screen"
               mt={2}
-              loading="lazy"
             />
             <Image
               boxSize={[150, 250]}
@@ -144,7 +141,6 @@ export default function Projects() {
               src="/app_screenshots/toptracks-tracks-screen.png"
               alt="Top Tracks Tracks Screen"
               mt={2}
-              loading="lazy"
             />
           </Flex>
         }

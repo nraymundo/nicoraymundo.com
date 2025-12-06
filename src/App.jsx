@@ -28,8 +28,8 @@ function App() {
       <Header />
       <CursorDot />
       <Box as="main" flex="1">
-        {/* <Outlet /> */}
-        <AnimatePresence mode="wait">
+        <Outlet />
+        {/* <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
             initial={{ y: "100vh" }}
@@ -40,7 +40,7 @@ function App() {
               <Outlet />
             </Box>
           </motion.div>
-        </AnimatePresence>
+        </AnimatePresence> */}
       </Box>
       <Footer />
     </Box>
