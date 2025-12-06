@@ -5,9 +5,9 @@ const introText =
   "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at American Express.";
 
 const aboutText =
-  "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and slowly shaping them through iteration and refinement.\n\n" +
-  "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process, ensuring a reliable and efficient journey for our clients.\n\n" +
-  "Outside of work, I enjoy looking for new restaurants to try in the city, running the Central Park loop, and traveling with friends and family.";
+  "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and continuously shaping them through iteration and refinement.\n\n" +
+  "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process for our clients.\n\n" +
+  "Outside of my day job, you'll find me running the Central Park loop, scrolling through Beli looking for new restaurants to try, or playing basketball with friends.";
 
 function CVGridHeader({ rows, text, isSectionHeader }) {
   return (

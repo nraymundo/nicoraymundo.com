@@ -1,13 +1,27 @@
+import { useLayoutEffect, useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
-import { Outlet, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { useLayoutEffect } from "react";
+import CursorDot from "./components/CursorDot";
+
+const DELAY_MS = 500;
 
 function App() {
   const bg = useColorModeValue("#F2F2F2", "#0A0A0A");
   const location = useLocation();
+  const [showOutlet, setShowOutlet] = useState(true);
+
+  useEffect(() => {
+    setShowOutlet(false);
+
+    const timeout = setTimeout(() => {
+      setShowOutlet(true);
+    }, DELAY_MS);
+
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
 
   useLayoutEffect(() => {
     requestAnimationFrame(() => {
@@ -25,24 +39,23 @@ function App() {
       flexDirection="column"
     >
       <Header />
-
+      <CursorDot />
       <Box as="main" flex="1">
-        <AnimatePresence mode="wait">
-          <Box
-            as={motion.div}
+        {/* <Outlet /> */}
+        {showOutlet ? <Outlet /> : null}
+        {/* <AnimatePresence mode="wait">
+          <motion.div
             key={location.pathname}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.35,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            initial={{ y: "100vh" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Outlet />
-          </Box>
-        </AnimatePresence>
+            <Box>
+              <Outlet />
+            </Box>
+          </motion.div>
+        </AnimatePresence> */}
       </Box>
-
       <Footer />
     </Box>
   );
