@@ -74,7 +74,7 @@ export default function Projects() {
             />
           </Flex>
         }
-        projectUrl="https://whoop-grid.vercel.app"
+        // projectUrl="https://whoop-grid.vercel.app"
         githubUrl="https://github.com/nraymundo/whoop-grid"
       />
       <ProjectCard
