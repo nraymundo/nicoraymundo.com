@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export default function CursorDot() {
+export default function CursorDot({ className }) {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
 
@@ -44,6 +44,7 @@ export default function CursorDot() {
 
   return (
     <motion.div
+      className={className}
       style={{
         position: "fixed",
         top: -10,
