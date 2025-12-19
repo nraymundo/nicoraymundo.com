@@ -6,8 +6,8 @@ export default function CursorDot() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
 
-  const springX = useSpring(x, { stiffness: 300, damping: 25, mass: 0.5 });
-  const springY = useSpring(y, { stiffness: 300, damping: 25, mass: 0.5 });
+  const springX = useSpring(x, { stiffness: 1000, damping: 45, mass: 0.25 });
+  const springY = useSpring(y, { stiffness: 1000, damping: 45, mass: 0.25 });
 
   // const [isDark, setIsDark] = useState(false);
 
@@ -17,7 +17,6 @@ export default function CursorDot() {
       x.set(clientX);
       y.set(clientY);
 
-      // find all elements that trigger dark mode
       // const darkEls = document.querySelectorAll('[data-cursor="dark"]');
 
       // let insideDark = false;

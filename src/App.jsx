@@ -26,7 +26,7 @@ function App() {
       flexDirection="column"
     >
       <Header />
-      <CursorDot />
+      <CursorDot className="cursor-dot" />
       <Box as="main" flex="1">
         <Outlet />
         {/* <AnimatePresence mode="wait">
