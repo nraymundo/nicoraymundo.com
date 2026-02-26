@@ -25,7 +25,7 @@ export default function Footer() {
                 lat: 40.787,
                 lng: -73.9754,
                 src: me,
-                label: "Me / NYC",
+                label: "Me!",
               },
             ]}
           />

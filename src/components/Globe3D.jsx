@@ -26,12 +26,12 @@ function Marker({ marker, radius, defaultSize, onClick, onHover }) {
 
   const surfacePosition = useMemo(
     () => latLngToVector3(marker.lat, marker.lng, radius * 1.001),
-    [marker.lat, marker.lng, radius]
+    [marker.lat, marker.lng, radius],
   );
 
   const topPosition = useMemo(
     () => latLngToVector3(marker.lat, marker.lng, radius * 1.18),
-    [marker.lat, marker.lng, radius]
+    [marker.lat, marker.lng, radius],
   );
 
   const lineHeight = topPosition.distanceTo(surfacePosition);
@@ -98,28 +98,51 @@ function Marker({ marker, radius, defaultSize, onClick, onHover }) {
         >
           <div
             style={{
-              cursor: "pointer",
-              overflow: "hidden",
-              borderRadius: "50%",
-              backgroundColor: "#171717",
-              boxShadow: hovered
-                ? "0 20px 25px -5px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.5)"
-                : "0 4px 6px -1px rgba(0,0,0,0.2)",
-              transform: hovered ? "scale(1.25)" : "scale(1)",
-              transition: "transform 0.2s, box-shadow 0.2s",
-              width: "8px",
-              height: "8px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "2px",
             }}
-            onMouseEnter={handlePointerEnter}
-            onMouseLeave={handlePointerLeave}
-            onClick={handleClick}
           >
-            <img
-              src={marker.src}
-              alt={marker.label || "Marker"}
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-              draggable={false}
-            />
+            {marker.label && (
+              <span
+                style={{
+                  fontSize: "5px",
+                  color: "#ffffff",
+                  whiteSpace: "nowrap",
+                  textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+                  fontWeight: 500,
+                  letterSpacing: "0.02em",
+                }}
+              >
+                {marker.label}
+              </span>
+            )}
+            <div
+              style={{
+                cursor: "pointer",
+                overflow: "hidden",
+                borderRadius: "50%",
+                backgroundColor: "#171717",
+                boxShadow: hovered
+                  ? "0 20px 25px -5px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.5)"
+                  : "0 4px 6px -1px rgba(0,0,0,0.2)",
+                transform: hovered ? "scale(1.25)" : "scale(1)",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                width: "8px",
+                height: "8px",
+              }}
+              onMouseEnter={handlePointerEnter}
+              onMouseLeave={handlePointerLeave}
+              onClick={handleClick}
+            >
+              <img
+                src={marker.src}
+                alt={marker.label || "Marker"}
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                draggable={false}
+              />
+            </div>
           </div>
         </Html>
       </group>
@@ -147,12 +170,12 @@ function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
 
   const geometry = useMemo(
     () => new THREE.SphereGeometry(config.radius, 64, 64),
-    [config.radius]
+    [config.radius],
   );
 
   const wireframeGeometry = useMemo(
     () => new THREE.SphereGeometry(config.radius * 1.002, 32, 16),
-    [config.radius]
+    [config.radius],
   );
 
   return (
@@ -343,7 +366,7 @@ export function Globe3D({
 }) {
   const mergedConfig = useMemo(
     () => ({ ...defaultConfig, ...config }),
-    [config]
+    [config],
   );
 
   return (
@@ -352,7 +375,11 @@ export function Globe3D({
       style={{ position: "relative", height: "500px", width: "100%", ...style }}
     >
       <Canvas
-        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+        gl={{
+          antialias: true,
+          alpha: true,
+          powerPreference: "high-performance",
+        }}
         dpr={[1, 2]}
         camera={{
           fov: 45,
