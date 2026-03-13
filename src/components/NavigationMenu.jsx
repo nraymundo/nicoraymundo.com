@@ -247,7 +247,7 @@ export default function NavigationMenu({}) {
               <Flex align="center" color="#F2F2F2">
                 <Icon as={MdCopyright} fontSize="12px" />
                 <Text fontSize="12px" pl={1}>
-                  2025
+                  2026
                 </Text>
               </Flex>
 

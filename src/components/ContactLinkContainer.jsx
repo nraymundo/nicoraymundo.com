@@ -21,8 +21,8 @@ export default function ContactLinkContainer() {
         />
         <ContactLink name="Twitter" url="https://twitter.com/nicoraymundo2" />
         <ContactLink
-          name="nicoraymundo2@gmail.com"
-          url="mailto:nicoraymundo2@gmail.com"
+          name="me@nicoraymundo.com"
+          url="mailto:n@nicoraymundo.com"
         />
       </Grid>
     </Box>
