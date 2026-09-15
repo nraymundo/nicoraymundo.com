@@ -7,7 +7,7 @@ const introText =
 const aboutText =
   "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and continuously shaping them through iteration and refinement.\n\n" +
   "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process for our clients.\n\n" +
-  "Outside of my day job, you'll find me running the Central Park loop, scrolling through Beli looking for new restaurants to try, or playing basketball with friends.";
+  "Outside of my day job, you'll find me running the Central Park loop, reviewing movies on my Letterboxd, or playing basketball with friends.";
 
 function CVGridHeader({ rows, text, isSectionHeader }) {
   return (
@@ -138,8 +138,8 @@ export default function About() {
           <CVGridHeader rows={[1, 4]} text="Curriculum Vitae" />
           <CVGridHeader rows={1} text="American Express" />
           <CVGridInfo
-            positions={["Engineer II", "Engineer I"]}
-            dates={["2023 - Present", "2021 - 2023"]}
+            positions={["Engineer III", "Engineer II", "Engineer I"]}
+            dates={["2026 - Present", "2023 - 2026", "2021 - 2023"]}
           />
           <CVGridHeader rows={1} text="Maxim Integrated" />
           <CVGridInfo
