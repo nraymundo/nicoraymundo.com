@@ -16,6 +16,141 @@ export default function Projects() {
       mb={20}
     >
       <ProjectCard
+        name="Reverb"
+        year="2026"
+        description="A mobile app built with React Native (Expo) and the Spotify API, backed by Supabase, that shows a user's top tracks, artists, and albums alongside detailed listening stats for daily, weekly, and monthly date ranges."
+        tech={
+          <Flex direction="row">
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              TypeScript
+            </Text>
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              JavaScript
+            </Text>
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              React Native
+            </Text>
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              Expo
+            </Text>
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              Spotify API
+            </Text>
+            <Text
+              textStyle="secondary"
+              fontSize="sm"
+              mr={2}
+              whiteSpace="nowrap"
+            >
+              Supabase
+            </Text>
+            <Text textStyle="secondary" fontSize="sm" whiteSpace="nowrap">
+              SQL
+            </Text>
+          </Flex>
+        }
+        image={
+          <Flex
+            justify="center"
+            align="center"
+            flexWrap="wrap"
+            backgroundColor="#F0EEE9"
+            mt={2}
+            mb={2}
+            py={[1.5, 2.5]}
+            borderRadius={10}
+            gap={[3, 6]}
+          >
+            <Image
+              h={[150, 250]}
+              my={2}
+              w="auto"
+              fit="contain"
+              align="center top"
+              borderRadius={[16, 26]}
+              border="3px solid #000"
+              boxSizing="border-box"
+              src="/app_screenshots/reverb-login-screen.png"
+              alt="Reverb Login Screen"
+            />
+            <Image
+              h={[150, 250]}
+              my={2}
+              w="auto"
+              fit="contain"
+              align="center top"
+              borderRadius={[16, 26]}
+              border="3px solid #000"
+              boxSizing="border-box"
+              src="/app_screenshots/reverb-home-screen.png"
+              alt="Reverb Home Screen"
+            />
+            <Image
+              h={[150, 250]}
+              my={2}
+              w="auto"
+              fit="contain"
+              align="center top"
+              borderRadius={[16, 26]}
+              border="3px solid #000"
+              boxSizing="border-box"
+              src="/app_screenshots/reverb-stats-screen.png"
+              alt="Reverb Stats Screen"
+            />
+            <Image
+              h={[150, 250]}
+              my={2}
+              w="auto"
+              fit="contain"
+              align="center top"
+              borderRadius={[16, 26]}
+              border="3px solid #000"
+              boxSizing="border-box"
+              src="/app_screenshots/reverb-recent-screen.png"
+              alt="Reverb Recent Screen"
+            />
+            <Image
+              h={[150, 250]}
+              my={2}
+              w="auto"
+              fit="contain"
+              align="center top"
+              borderRadius={[16, 26]}
+              border="3px solid #000"
+              boxSizing="border-box"
+              src="/app_screenshots/reverb-recent-detail-screen.png"
+              alt="Reverb Recent Detail Screen"
+            />
+          </Flex>
+        }
+        githubUrl="https://github.com"
+      />
+      <ProjectCard
         name="WHOOP Grid"
         path="whoop-grid"
         year="2025"
