@@ -1,7 +1,15 @@
-import { Flex, Text, Image, SimpleGrid } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Image,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
+  const reverbBg = useColorModeValue("#FFD166", "#F0EEE9");
+
   return (
     <SimpleGrid
       w="100%"
@@ -55,7 +63,7 @@ export default function Projects() {
             justify="center"
             align="center"
             flexWrap="wrap"
-            backgroundColor="#F0EEE9"
+            backgroundColor={reverbBg}
             mt={2}
             mb={2}
             py={[1.5, 2.5]}
