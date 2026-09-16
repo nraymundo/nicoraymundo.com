@@ -27,15 +27,7 @@ export default function Projects() {
               mr={2}
               whiteSpace="nowrap"
             >
-              TypeScript
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              JavaScript
+              JS
             </Text>
             <Text
               textStyle="secondary"
@@ -51,26 +43,10 @@ export default function Projects() {
               mr={2}
               whiteSpace="nowrap"
             >
-              Expo
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
               Spotify API
             </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              Supabase
-            </Text>
             <Text textStyle="secondary" fontSize="sm" whiteSpace="nowrap">
-              SQL
+              Supabase
             </Text>
           </Flex>
         }
@@ -88,69 +64,45 @@ export default function Projects() {
           >
             <Image
               h={[150, 250]}
-              my={2}
               w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              border="3px solid #000"
-              boxSizing="border-box"
-              src="/app_screenshots/reverb-login-screen.png"
+              src="/app_screenshots/reverb-login-screen-framed.png"
               alt="Reverb Login Screen"
             />
             <Image
               h={[150, 250]}
-              my={2}
               w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              border="3px solid #000"
-              boxSizing="border-box"
-              src="/app_screenshots/reverb-home-screen.png"
+              src="/app_screenshots/reverb-home-screen-framed.png"
               alt="Reverb Home Screen"
             />
             <Image
               h={[150, 250]}
-              my={2}
               w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              border="3px solid #000"
-              boxSizing="border-box"
-              src="/app_screenshots/reverb-stats-screen.png"
+              src="/app_screenshots/reverb-stats-screen-framed.png"
               alt="Reverb Stats Screen"
             />
             <Image
               h={[150, 250]}
-              my={2}
               w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              border="3px solid #000"
-              boxSizing="border-box"
-              src="/app_screenshots/reverb-recent-screen.png"
+              src="/app_screenshots/reverb-recent-screen-framed.png"
               alt="Reverb Recent Screen"
-            />
-            <Image
-              h={[150, 250]}
-              my={2}
-              w="auto"
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              border="3px solid #000"
-              boxSizing="border-box"
-              src="/app_screenshots/reverb-recent-detail-screen.png"
-              alt="Reverb Recent Detail Screen"
             />
           </Flex>
         }
         githubUrl="https://github.com"
       />
-      <ProjectCard
+      {/* <ProjectCard
         name="WHOOP Grid"
         path="whoop-grid"
         year="2025"
@@ -211,7 +163,7 @@ export default function Projects() {
         }
         // projectUrl="https://whoop-grid.vercel.app"
         githubUrl="https://github.com/nraymundo/whoop-grid"
-      />
+      /> */}
       <ProjectCard
         name="Spotify Stats"
         path="spotify-stats"
@@ -225,7 +177,7 @@ export default function Projects() {
               mr={2}
               whiteSpace="nowrap"
             >
-              JavaScript
+              JS
             </Text>
             <Text
               textStyle="secondary"
@@ -248,34 +200,41 @@ export default function Projects() {
         image={
           <Flex
             justify="center"
-            backgroundColor="#E9E3DD"
+            align="center"
+            flexWrap="wrap"
+            backgroundColor="#F0EEE9"
             mt={2}
             mb={2}
+            py={[1.5, 2.5]}
             borderRadius={10}
+            gap={[3, 6]}
           >
             <Image
-              boxSize={[150, 250]}
-              fit="cover"
+              h={[150, 250]}
+              w="auto"
+              fit="contain"
               align="center top"
+              borderRadius={[16, 26]}
               src="/app_screenshots/toptracks-home-screen.png"
               alt="Top Tracks Home Screen"
-              mt={2}
             />
             <Image
-              boxSize={[150, 250]}
-              fit="cover"
+              h={[150, 250]}
+              w="auto"
+              fit="contain"
               align="center top"
+              borderRadius={[16, 26]}
               src="/app_screenshots/toptracks-artists-screen.png"
               alt="Top Tracks Artists Screen"
-              mt={2}
             />
             <Image
-              boxSize={[150, 250]}
-              fit="cover"
+              h={[150, 250]}
+              w="auto"
+              fit="contain"
               align="center top"
+              borderRadius={[16, 26]}
               src="/app_screenshots/toptracks-tracks-screen.png"
               alt="Top Tracks Tracks Screen"
-              mt={2}
             />
           </Flex>
         }
@@ -293,7 +252,7 @@ export default function Projects() {
               mr={2}
               whiteSpace="nowrap"
             >
-              JavaScript
+              JS
             </Text>
             <Text
               textStyle="secondary"
