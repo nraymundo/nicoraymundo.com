@@ -1,7 +1,12 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Image, Skeleton } from "@chakra-ui/react";
 
-export default function FadeImage({ eager = false, aspectRatio, ...imageProps }) {
+export default function FadeImage({
+  eager = false,
+  aspectRatio,
+  transition,
+  ...imageProps
+}) {
   const imgRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -29,7 +34,7 @@ export default function FadeImage({ eager = false, aspectRatio, ...imageProps })
         loading={eager ? "eager" : "lazy"}
         onLoad={() => setLoaded(true)}
         opacity={loaded ? 1 : 0}
-        transition="opacity 0.3s ease"
+        transition={transition ? `${transition}, opacity 0.3s ease` : "opacity 0.3s ease"}
       />
     </Skeleton>
   );

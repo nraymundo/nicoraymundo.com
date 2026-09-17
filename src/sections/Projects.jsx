@@ -1,12 +1,87 @@
-import {
-  Flex,
-  Text,
-  Image,
-  SimpleGrid,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Text, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
-import FadeImage from "../components/FadeImage";
+import ProjectScreenshots from "../components/ProjectScreenshots";
+
+const reverbScreenshots = [
+  {
+    src: "/app_screenshots/reverb-login-screen-framed.webp",
+    fullSrc: "/app_screenshots/reverb-login-screen-framed-full.webp",
+    alt: "Reverb Login Screen",
+    ratio: 275 / 550,
+  },
+  {
+    src: "/app_screenshots/reverb-home-screen-framed.webp",
+    fullSrc: "/app_screenshots/reverb-home-screen-framed-full.webp",
+    alt: "Reverb Home Screen",
+    ratio: 275 / 550,
+  },
+  {
+    src: "/app_screenshots/reverb-stats-screen-framed.webp",
+    fullSrc: "/app_screenshots/reverb-stats-screen-framed-full.webp",
+    alt: "Reverb Stats Screen",
+    ratio: 275 / 550,
+  },
+  {
+    src: "/app_screenshots/reverb-recent-screen-framed.webp",
+    fullSrc: "/app_screenshots/reverb-recent-screen-framed-full.webp",
+    alt: "Reverb Recent Screen",
+    ratio: 275 / 550,
+  },
+];
+
+const whoopGridScreenshots = [
+  {
+    src: "/app_screenshots/whoop-grid.webp",
+    fullSrc: "/app_screenshots/whoop-grid-full.webp",
+    alt: "Whoop Grid - Grid",
+    ratio: 2278 / 1600,
+  },
+  {
+    src: "/app_screenshots/whoop-grid-insights.webp",
+    fullSrc: "/app_screenshots/whoop-grid-insights-full.webp",
+    alt: "Whoop Grid - Insights",
+    ratio: 2278 / 1600,
+  },
+  {
+    src: "/app_screenshots/whoop-grid-streaks.webp",
+    fullSrc: "/app_screenshots/whoop-grid-streaks-full.webp",
+    alt: "Whoop Grid - Streaks",
+    ratio: 2278 / 1600,
+  },
+  {
+    src: "/app_screenshots/whoop-grid-review.webp",
+    fullSrc: "/app_screenshots/whoop-grid-review-full.webp",
+    alt: "Whoop Grid - Review",
+    ratio: 2278 / 1600,
+  },
+  {
+    src: "/app_screenshots/whoop-grid-card.webp",
+    fullSrc: "/app_screenshots/whoop-grid-card-full.webp",
+    alt: "Whoop Grid - My Card",
+    ratio: 2278 / 1600,
+  },
+];
+
+const spotifyStatsScreenshots = [
+  {
+    src: "/app_screenshots/toptracks-home-screen.webp",
+    fullSrc: "/app_screenshots/toptracks-home-screen-full.webp",
+    alt: "Top Tracks Home Screen",
+    ratio: 347 / 550,
+  },
+  {
+    src: "/app_screenshots/toptracks-artists-screen.webp",
+    fullSrc: "/app_screenshots/toptracks-artists-screen-full.webp",
+    alt: "Top Tracks Artists Screen",
+    ratio: 347 / 550,
+  },
+  {
+    src: "/app_screenshots/toptracks-tracks-screen.webp",
+    fullSrc: "/app_screenshots/toptracks-tracks-screen-full.webp",
+    alt: "Top Tracks Tracks Screen",
+    ratio: 346 / 550,
+  },
+];
 
 export default function Projects() {
   const reverbBg = useColorModeValue("#FFD166", "#F0EEE9");
@@ -60,66 +135,15 @@ export default function Projects() {
           </Flex>
         }
         image={
-          <Flex
-            justify="center"
-            align="center"
-            flexWrap="wrap"
-            backgroundColor={reverbBg}
-            mt={2}
-            mb={2}
-            py={[1.5, 2.5]}
-            borderRadius={10}
-            gap={[3, 6]}
-          >
-            <FadeImage
-              eager
-              aspectRatio={275 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-login-screen-framed.webp"
-              alt="Reverb Login Screen"
-            />
-            <FadeImage
-              eager
-              aspectRatio={275 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-home-screen-framed.webp"
-              alt="Reverb Home Screen"
-            />
-            <FadeImage
-              eager
-              aspectRatio={275 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-stats-screen-framed.webp"
-              alt="Reverb Stats Screen"
-            />
-            <FadeImage
-              eager
-              aspectRatio={275 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-recent-screen-framed.webp"
-              alt="Reverb Recent Screen"
-            />
-          </Flex>
+          <ProjectScreenshots images={reverbScreenshots} bg={reverbBg} eager />
         }
         githubUrl="https://github.com"
       />
-      {/* <ProjectCard
-        name="WHOOP Grid"
+      <ProjectCard
+        name="Signal"
         path="whoop-grid"
         year="2025"
-        description="A dashboard that visualizes WHOOP recovery, sleep, and activity data using GitHub-style calendar heatmaps. Hosted on Vercel."
+        description="Signal is a dashboard that visualizes WHOOP recovery, sleep, and strain data using GitHub-style calendar heatmaps, with AI-generated readouts (via Anthropic's Claude), streaks, and a shareable year-in-review card. Hosted on Vercel."
         tech={
           <Flex direction="row">
             <Text
@@ -138,45 +162,22 @@ export default function Projects() {
             >
               Next.js
             </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
-              Tailwind CSS
-            </Text>
-            <Text
-              textStyle="secondary"
-              fontSize="sm"
-              mr={2}
-              whiteSpace="nowrap"
-            >
+            <Text textStyle="secondary" fontSize="sm" whiteSpace="nowrap">
               Whoop API
             </Text>
           </Flex>
         }
         image={
-          <Flex
-            justify="center"
-            backgroundColor="#E9E3DD"
-            mt={2}
-            mb={2}
-            _hover={{ bg: "#797979" }}
-            borderRadius={10}
-          >
-            <Image
-              fit="cover"
-              align="center top"
-              src="/app_screenshots/whoop-grid.jpg"
-              alt="Whoop Grid"
-              borderRadius={10}
-            />
-          </Flex>
+          <ProjectScreenshots
+            images={whoopGridScreenshots}
+            bg="#CF6B4E"
+            borderRadius="md"
+            maxThumbnails={3}
+          />
         }
         // projectUrl="https://whoop-grid.vercel.app"
         githubUrl="https://github.com/nraymundo/whoop-grid"
-      /> */}
+      />
       <ProjectCard
         name="Spotify Stats"
         path="spotify-stats"
@@ -211,45 +212,7 @@ export default function Projects() {
           </Flex>
         }
         image={
-          <Flex
-            justify="center"
-            align="center"
-            flexWrap="wrap"
-            backgroundColor="#F0EEE9"
-            mt={2}
-            mb={2}
-            py={[1.5, 2.5]}
-            borderRadius={10}
-            gap={[3, 6]}
-          >
-            <FadeImage
-              aspectRatio={347 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-home-screen.webp"
-              alt="Top Tracks Home Screen"
-            />
-            <FadeImage
-              aspectRatio={347 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-artists-screen.webp"
-              alt="Top Tracks Artists Screen"
-            />
-            <FadeImage
-              aspectRatio={346 / 550}
-              h={[150, 250]}
-              fit="contain"
-              align="center top"
-              borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-tracks-screen.webp"
-              alt="Top Tracks Tracks Screen"
-            />
-          </Flex>
+          <ProjectScreenshots images={spotifyStatsScreenshots} bg="#F0EEE9" />
         }
         githubUrl="https://github.com/nraymundo/spotify-test"
       />
