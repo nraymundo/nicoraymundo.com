@@ -6,6 +6,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
+import FadeImage from "../components/FadeImage";
 
 export default function Projects() {
   const reverbBg = useColorModeValue("#FFD166", "#F0EEE9");
@@ -70,40 +71,44 @@ export default function Projects() {
             borderRadius={10}
             gap={[3, 6]}
           >
-            <Image
+            <FadeImage
+              eager
+              aspectRatio={275 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-login-screen-framed.png"
+              src="/app_screenshots/reverb-login-screen-framed.webp"
               alt="Reverb Login Screen"
             />
-            <Image
+            <FadeImage
+              eager
+              aspectRatio={275 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-home-screen-framed.png"
+              src="/app_screenshots/reverb-home-screen-framed.webp"
               alt="Reverb Home Screen"
             />
-            <Image
+            <FadeImage
+              eager
+              aspectRatio={275 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-stats-screen-framed.png"
+              src="/app_screenshots/reverb-stats-screen-framed.webp"
               alt="Reverb Stats Screen"
             />
-            <Image
+            <FadeImage
+              eager
+              aspectRatio={275 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/reverb-recent-screen-framed.png"
+              src="/app_screenshots/reverb-recent-screen-framed.webp"
               alt="Reverb Recent Screen"
             />
           </Flex>
@@ -217,31 +222,31 @@ export default function Projects() {
             borderRadius={10}
             gap={[3, 6]}
           >
-            <Image
+            <FadeImage
+              aspectRatio={347 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-home-screen.png"
+              src="/app_screenshots/toptracks-home-screen.webp"
               alt="Top Tracks Home Screen"
             />
-            <Image
+            <FadeImage
+              aspectRatio={347 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-artists-screen.png"
+              src="/app_screenshots/toptracks-artists-screen.webp"
               alt="Top Tracks Artists Screen"
             />
-            <Image
+            <FadeImage
+              aspectRatio={346 / 550}
               h={[150, 250]}
-              w="auto"
               fit="contain"
               align="center top"
               borderRadius={[16, 26]}
-              src="/app_screenshots/toptracks-tracks-screen.png"
+              src="/app_screenshots/toptracks-tracks-screen.webp"
               alt="Top Tracks Tracks Screen"
             />
           </Flex>

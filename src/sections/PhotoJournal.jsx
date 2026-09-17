@@ -1,6 +1,7 @@
-import { Flex, Image, SimpleGrid, Box, Text, Link } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Box, Text, Link } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { photos } from "../utils/photos";
+import FadeImage from "../components/FadeImage";
 
 const entries = [
   {
@@ -91,8 +92,13 @@ export default function PhotoJournal() {
 
           <SimpleGrid columns={[2, 3, 4]} spacing={6} px={[4, 10]} mt={5}>
             {entry.images.map((img, i) => (
-              <Flex key={img ?? i} justify="center">
-                <Image src={img} fit="contain" w="100%" />
+              <Flex key={img.src ?? i} justify="center">
+                <FadeImage
+                  src={img.src}
+                  aspectRatio={img.ratio}
+                  fit="contain"
+                  w="100%"
+                />
               </Flex>
             ))}
           </SimpleGrid>

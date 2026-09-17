@@ -1,4 +1,5 @@
-import { Flex, Image, SimpleGrid, Box, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Box, Text } from "@chakra-ui/react";
+import FadeImage from "./FadeImage";
 
 export default function PhotoSet({ title, images }) {
   return (
@@ -12,8 +13,13 @@ export default function PhotoSet({ title, images }) {
 
         <SimpleGrid columns={[1, 2]} spacing={6} px={[4, 10]} mt={20}>
           {images.map((img, i) => (
-            <Flex key={img ?? i} justify="center">
-              <Image src={img} fit="contain" w="100%" />
+            <Flex key={img.src ?? i} justify="center">
+              <FadeImage
+                src={img.src}
+                aspectRatio={img.ratio}
+                fit="contain"
+                w="100%"
+              />
             </Flex>
           ))}
         </SimpleGrid>
