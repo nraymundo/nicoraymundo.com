@@ -57,12 +57,12 @@ export default function ScreenshotCarouselModal({
   // The width budget also leaves room for the arrows/close button, which
   // sit outside the box's edges.
   const boxHeight = [
-    `min(58vh, ${(70 / ratio).toFixed(2)}vw)`,
-    `min(70vh, ${(78 / ratio).toFixed(2)}vw)`,
+    `min(58dvh, ${(70 / ratio).toFixed(2)}vw)`,
+    `min(70dvh, ${(78 / ratio).toFixed(2)}vw)`,
   ];
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="full">
+    <Modal isOpen={isOpen} onClose={onClose} size="full" allowPinchZoom>
       <ModalOverlay bg="blackAlpha.700" />
       <ModalContent
         bg="transparent"
@@ -71,7 +71,7 @@ export default function ScreenshotCarouselModal({
         flexDir="column"
         alignItems="center"
         justifyContent="center"
-        minH="100vh"
+        minH="100dvh"
         px={[10, 20]}
         py={[10, 16]}
         onKeyDown={handleKeyDown}
