@@ -1,1 +1,12 @@
-{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }
+{
+  "routes": [
+    {
+      "src": "/(app_screenshots|photos)/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=3600, stale-while-revalidate=86400"
+      },
+      "continue": true
+    },
+    { "src": "/[^.]+", "dest": "/", "status": 200 }
+  ]
+}
