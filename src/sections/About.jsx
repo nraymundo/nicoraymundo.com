@@ -2,12 +2,11 @@ import { Box, Text, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import AnimatedText from "../components/AnimatedText";
 
 const introText =
-  "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in New York City and at American Express.";
+  "Hi, I'm Nico. I'm a software engineer from the San Francisco Bay Area, currently in Brooklyn and at American Express.";
 
 const aboutText =
   "I’m a software engineer who enjoys building clean, reliable web applications. I enjoy the slow, thoughtful process of taking ideas from concept to production and continuously shaping them through iteration and refinement.\n\n" +
-  "I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with various teams to design and implement solutions to streamline the onboarding process for our clients.\n\n" +
-  "Outside of my day job, you'll find me running the Central Park loop, reviewing movies on my Letterboxd, or playing basketball with friends.";
+  "Outside of my day job, you'll find me running along the Williamsburg waterfront, logging movies on my Letterboxd, or playing basketball with friends.";
 
 function CVGridHeader({ rows, text, isSectionHeader }) {
   return (
